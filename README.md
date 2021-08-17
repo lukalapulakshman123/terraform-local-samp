@@ -1,4 +1,4 @@
-# Terraform AZURE Application Registration module
+# Terraform Azure Application Registration module
 * This module allows you to Register an application with required roles and permissions and return Clientid and ClientSecret
 * This module will register an application and create Service principal with following roles attached:
   * Reader
@@ -53,13 +53,10 @@ output "ClientsecretId" {
 | ClientsecretId | Secret ID |
 
 
-## 2. Execute Terraform script to get role arn
+## 2. Execute Terraform script to get ClientId and ClientSecret
+
 ```sh
 $ terraform init
 $ terraform plan
 $ terraform apply
 ```
-
-
-
-
