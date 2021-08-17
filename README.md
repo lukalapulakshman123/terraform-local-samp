@@ -60,3 +60,10 @@ $ terraform init
 $ terraform plan
 $ terraform apply
 ```
+## 2. Execute Terraform script to get ClientId and ClientSecret
+
+```sh
+$ terraform init
+$ terraform plan
+$ terraform apply
+```
