@@ -5,13 +5,13 @@
   * Reader and Data Access
   * Custom Readonly access for required resources
   
-## Create a <file.tf> file and paste below code and modify as you needed
+## 1.Create a <file.tf> file and paste below code and modify as you needed
 
 ```
 module "iam-config" {
- source = "/home/llukalapu/practice/llrazure"
+ source = "github.com/uptycslabs/terraform-azure-iam-config"
 
-  app_prefix = "lakshman_azure_test"
+  app_prefix = "cloudquery"
   }
   
 output "Subscriptionid" {
@@ -38,24 +38,28 @@ output "ClientsecretId" {
 
 ## Inputs
 
-
+| Name | Description | Type | Default |
+| ---- | ----------- | ---- | ------- |
+| app_prefix | Prefix to be used for naming new resources | `string` | `cloudquery`|
 
 ## Outputs
 
 | Name                    | Description      |
 | ----------------------- | ---------------- |
-| Subscriptionid        | AWS IAM role ARN |
+| Subscriptionid        | Subscriptionid  |
 |  TenantId  | TenantId |
 |  ObjectId | Objectid |
 |  Client_Secret  |  ClientSecret |
+|  Application_id |   ClientID |
 
 
-## 3. Execute Terraform script to get role arn
+## 2. Execute Terraform script to get role arn
 ```sh
 $ terraform init
 $ terraform plan
 $ terraform apply
 ```
+
 
 
 
