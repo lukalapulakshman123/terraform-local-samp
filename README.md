@@ -15,25 +15,24 @@ module "iam-config" {
   }
   
 output "Subscriptionid" {
-value=module.iam-config.SubscriptionId
+value=module.iam-config.Subscription_ID
 }
-output "TenantId" {
-value=module.iam-config.Tenant_id
+output "Tenantid" {
+value=module.iam-config.Tenant_ID
 }
-output "Application_id" {
-  value = module.iam-config.Applicationid
+output "Applicationid" {
+  value = module.iam-config.Application_ID
 }
-output "Object_id" {
-  value = module.iam-config.Objectid
+output "Objectid" {
+  value = module.iam-config.Object_ID
 }
-output "Client_Secret" {
-  value = module.iam-config.client_secret
+output "ClientSecret" {
+  value = module.iam-config.Client_Secret
   sensitive = true
 }
 output "ClientsecretId" {
-    value=module.iam-config.client_secret_id
+    value=module.iam-config.Client_Secret_ID
 }
-
 ```
 
 ## Inputs
@@ -47,10 +46,11 @@ output "ClientsecretId" {
 | Name                    | Description      |
 | ----------------------- | ---------------- |
 | Subscriptionid        | Subscriptionid  |
-|  TenantId  | TenantId |
-|  ObjectId | Objectid |
-|  Client_Secret  |  ClientSecret |
-|  Application_id |   ClientID |
+|  Tenantid  | TenantId |
+|  Objectid | Objectid of the Application|
+|  ClientSecret |  ClientSecret of the application |
+|  Applicationid |   ClientID of the application |
+| ClientsecretId | Secret ID |
 
 
 ## 2. Execute Terraform script to get role arn
